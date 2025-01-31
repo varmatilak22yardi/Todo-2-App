@@ -1,0 +1,6 @@
+<div>
+  <input type="checkbox" [(ngModel)]="todo.completed"/>
+  <span [class.comleted]="todo.completed">{{todo.title}}</span>
+  <button (click)="onRemove()">Remove</button>
+
+</div>
