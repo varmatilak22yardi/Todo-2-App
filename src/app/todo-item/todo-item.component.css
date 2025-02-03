@@ -1,8 +1,53 @@
-.completed{
-  text-decoration:line-through;
-  color:gray;
+/* Styling for each todo-item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Arial", sans-serif;
 }
 
-button{
-  margin-left:10px;
+.todo-item:hover {
+  background-color: #f9f9f9;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  color: #333;
+  transition: color 0.3s ease;
+  margin-right: 2%;
+}
+
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  background-color: #d32f2f;
+}
+
+.todo-item button:focus {
+  outline: none;
 }
