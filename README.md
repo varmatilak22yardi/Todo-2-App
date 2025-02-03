@@ -1,63 +1,48 @@
-<<<<<<< HEAD
-# Todo2App
+# To-Do List App with LocalStorage in Angular 📝
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
+This Angular-based To-Do List app allows users to add, edit, and delete tasks. It utilizes the **localStorage API** to save tasks on the user's device, ensuring persistence across sessions. With local storage, your tasks are safe even after page refreshes or app restarts. 🚀
 
-## Development server
+## Features ✨
+- **Add tasks** to your to-do list. ➕
+- **Edit tasks** and update their details. ✏️
+- **Delete tasks** when completed or no longer needed. ❌
+- **Persistent task storage** using the localStorage API for seamless access across sessions. 💾
 
-To start a local development server, run:
+## LocalStorage Integration in Angular 🔒
+
+This app uses the **localStorage API** to store tasks directly in the browser, ensuring that tasks persist even after a page refresh or when the app is reopened. Here's how it works:
+
+- Tasks are saved in the browser's local storage as key-value pairs, ensuring that the user's to-do list remains available each time they access the app.
+- The app checks for existing tasks in localStorage when it loads and updates the task list accordingly.
+
+Example of using localStorage:
+```typescript
+// Save task to localStorage
+localStorage.setItem('tasks', JSON.stringify(this.tasks));
+
+// Retrieve tasks from localStorage
+this.tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+```
+## Setup and Installation ⚙️
+
+### Prerequisites 📋
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14.x or higher) 💻
+- [Angular CLI](https://angular.io/cli) 📦
+
+### Install the dependencies 📥
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/todolist-app.git
+cd todolist-app
+npm install
+```
+## Run the application 🚀
+
+To run the application locally, use the following command:
 
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Todo-2-App
->>>>>>> 19137ee2ed1ee9e9e075469f6178d36d5f531447
